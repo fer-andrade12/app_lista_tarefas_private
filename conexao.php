@@ -1,8 +1,9 @@
 <?php
 
 class Conexao {
+    
     private $host = 'localhost';
-    private $dbname = 'tarefas';
+    private $dbname = 'cadastro_tarefa';
     private $user = 'root';
     private $pass = '';
 
@@ -12,7 +13,7 @@ class Conexao {
             "mysql:host=$this->host;dbname=$this->dbname",
             "$this->user",
             "$this->pass"
-            );
+          );
 
             return $conexao;
 

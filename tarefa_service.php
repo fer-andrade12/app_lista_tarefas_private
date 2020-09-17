@@ -12,19 +12,22 @@ class TarefaService {
     }
 
     
-    public function inserir() {
-
+    public function inserir()  {
+        $query = 'insert into td_tarefas(tarefa) values (:tarefa)';
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bindValue(':tarefa', $this->tarefa->__get('tarefa'));
+        $stmt->execute();
     }
 
     public function recuperar() {
 
     }
 
-    public function atualizar() {
+    public function atualizar()  {
 
     }
 
-    public function remover() {
+    public function remover()  {
 
     }
 }
